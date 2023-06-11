@@ -15,6 +15,19 @@ const clearRecycler = () => {
   } catch (_error) {}
 };
 
+/**
+ * remove node_modules
+ */
+const removeNodeModules = () => {
+  try {
+    rimraf("node_modules", {}, (e) => {
+      if(e){
+        console.log('remove node_modules fail : ', e)
+      }
+    });
+  } catch (_error) {}
+}
+
 const isRoot = (arg) => /^(\/|[a-zA-Z]:\\)$/.test(path.resolve(arg));
 const filterOutRoot = (arg) => {
   const ok = preserveRoot === false || !isRoot(arg);
@@ -52,6 +65,11 @@ const go = (n) => {
     return;
   }
 
+  if (args[0] === "--node_modules" || args[0] === "-n") {
+    removeNodeModules();
+    return;
+  }
+
   // @ts-ignore
   rimraf(args[n], options, (er) => {
     if (er) throw er;
@@ -73,7 +91,8 @@ if (help || args.length === 0) {
   log("  -g, --glob          Expand glob patterns in arguments (default)");
   log("  --preserve-root     Do not remove '/' (default)");
   log("  --no-preserve-root  Do not treat '/' specially");
-  log("  --clear, -c            Clear RecycleBin");
+  log("  -c, --clear         Clear RecycleBin");
+  log("  -n, --node_modules  Remove node_modules");
   log("  --                  Stop parsing flags");
   process.exit(help ? 0 : 1);
 } else {
