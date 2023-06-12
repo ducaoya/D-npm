@@ -1,0 +1,36 @@
+{
+  "name": "d-deep-clone",
+  "version": "1.0.0",
+  "description": "js深克隆，支持基本类型，对象，循环引用",
+  "homepage": "https://github.com/ducaoya/D-npm/tree/master/deep-clone",
+  "main": "dist/index-cjs.cjs",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "module": "dist/index-es.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "d-deep-clone",
+    "deep-clone",
+    "deep clone",
+    "deep",
+    "clone"
+  ],
+  "author": "ducaoya",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducaoya/D-npm/tree/master/deep-clone"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "rollup": "^3.25.1"
+  }
+}
