@@ -1,0 +1,44 @@
+{
+  "name": "d-overload",
+  "version": "1.0.1",
+  "description": "js 函数重载",
+  "homepage": "https://github.com/ducaoya/D-npm/tree/master/overload",
+  "main": "dist/index-cjs.cjs",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "module": "dist/index-es.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "link": "npm link",
+    "publish": "rollup -c && npm publish",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "mmajor": "npm version mmajor"
+  },
+  "keywords": [
+    "overload",
+    "js-overload",
+    "js overload",
+    "function overload",
+    "function-overload",
+    "重载",
+    "重载函数",
+    "重载函数"
+  ],
+  "author": "ducaoya",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducaoya/D-npm/tree/master/overload"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "rollup": "^3.25.1"
+  }
+}
