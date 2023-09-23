@@ -1,0 +1,47 @@
+{
+  "name": "d-image-compress",
+  "version": "1.0.0",
+  "description": "node image compress, node 图片压缩",
+  "homepage": "https://github.com/ducaoya/D-npm/tree/master/image-compress",
+  "main": "dist/index-cjs.cjs",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "module": "dist/index-es.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "link": "npm link",
+    "publish": "rollup -c && npm publish",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "mmajor": "npm version mmajor"
+  },
+  "keywords": [
+    "image-compress",
+    "image compress",
+    "image",
+    "compress",
+    "compress image",
+    "image compressing",
+    "image-compressing",
+    "img compress",
+    "img compressing",
+    "图片压缩",
+    "压缩"
+  ],
+  "author": "ducaoya",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducaoya/D-npm/tree/master/image-compress"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "rollup": "^3.25.1"
+  }
+}
